@@ -1,0 +1,9 @@
+Twemoji graphics by Twitter, Inc. and other contributors, licensed under CC BY 4.0.
+License: https://creativecommons.org/licenses/by/4.0/
+Project: https://github.com/twitter/twemoji
+
+Unmodified originals (v14.0.2):
+maple-leaf.svg — https://raw.githubusercontent.com/twitter/twemoji/v14.0.2/assets/svg/1f341.svg
+fallen-leaves.svg — https://raw.githubusercontent.com/twitter/twemoji/v14.0.2/assets/svg/1f342.svg
+
+If recolored or otherwise modified, indicate those changes in attribution.
