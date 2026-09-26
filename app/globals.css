@@ -61,3 +61,20 @@ body{background-color:#30121e;background-image:radial-gradient(ellipse at 0% 0%,
 .utility-actions button:hover,.utility-actions a:hover{color:#e4c586}
 @media(max-width:1000px){.site-shell{--frame-inset:14px}}
 @media(max-width:700px){.site-shell{--frame-inset:7px;--frame-top:42px}}
+
+/* Account access uses the same paper, ink, and brass palette. */
+.auth-shell{min-height:100vh}
+.auth-page{max-width:480px;margin:0 auto;padding:52px 0 80px}
+.auth-heading{margin:36px 0 30px}
+.auth-heading>svg{color:var(--gold);margin-bottom:22px}
+.auth-heading h1{font-size:42px;line-height:1.15;margin:14px 0}
+.auth-heading p,.auth-help{font-size:14px;color:var(--muted);line-height:1.7}
+.auth-form{display:grid;gap:20px}
+.auth-form .field{margin:0}
+.auth-form .field input{width:100%}
+.auth-options{display:flex;justify-content:space-between;gap:16px;margin-top:18px;font-size:12px}
+.auth-options button{text-decoration:underline;text-underline-offset:4px}
+.auth-error{border-left:2px solid var(--gold);padding:10px 14px;font-size:14px;background:var(--card)}
+.auth-google{margin-top:24px;width:100%}
+.auth-footnote{margin-top:28px;font-size:12px;border-top:1px solid var(--line);padding-top:20px}
+@media(max-width:700px){.utility-actions{gap:15px}.auth-page{padding:32px 10px 60px}.auth-heading h1{font-size:36px}.auth-shell .utility>span{display:none}}

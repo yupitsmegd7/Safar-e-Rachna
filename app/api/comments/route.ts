@@ -1,2 +1,15 @@
-import {db} from '@/lib/db';
-export async function GET(req:Request){try{const id=new URL(req.url).searchParams.get('id');const {results}=await db().prepare('SELECT id,name,body,date FROM comments WHERE post=? ORDER BY date DESC LIMIT 100').bind(id).all();return Response.json(results);}catch{return Response.json({error:'Comments unavailable'},{status:503});}}
+import {createClient} from '@/lib/supabase/server';
+export const dynamic = 'force-dynamic';
+export async function GET(request: Request) {
+  const headers = {'Cache-Control': 'private, no-store'};
+  try {
+    const id = new URL(request.url).searchParams.get('id');
+    if (!id || id.length > 100) return Response.json({error: 'Post not found.'}, {status: 400, headers});
+    const db = await createClient();
+    const {data, error} = await db.from('comments').select('id,name,body,date').eq('post_id', id).order('date', {ascending: false}).limit(100);
+    if (error) throw error;
+    return Response.json(data, {headers});
+  } catch {
+    return Response.json({error: 'Comments unavailable.'}, {status: 503, headers});
+  }
+}
