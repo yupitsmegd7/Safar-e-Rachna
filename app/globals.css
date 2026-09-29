@@ -78,3 +78,75 @@ body{background-color:#30121e;background-image:radial-gradient(ellipse at 0% 0%,
 .auth-google{margin-top:24px;width:100%}
 .auth-footnote{margin-top:28px;font-size:12px;border-top:1px solid var(--line);padding-top:20px}
 @media(max-width:700px){.utility-actions{gap:15px}.auth-page{padding:32px 10px 60px}.auth-heading h1{font-size:36px}.auth-shell .utility>span{display:none}}
+
+/* A little botanical colour among the parchment, burgundy, and brass. */
+:root {
+  --mint-surface: #dfede1;
+  --mint-line: #a8c4ae;
+  --mint-accent: #446c55;
+  --mint-footer: #dceee2;
+  --mint-footer-ink: #263e30;
+  --mint-footer-muted: #496452;
+}
+:root[data-theme=ivory] {
+  --mint-surface: #e6f4eb;
+  --mint-line: #b4d3bd;
+  --mint-footer: #e2f3e8;
+}
+:root[data-theme=forest],
+:root[data-theme=night] {
+  --mint-surface: #2d4b3e;
+  --mint-line: #648873;
+  --mint-accent: #b6dfc5;
+  --mint-footer: #c9e1d2;
+}
+:root[data-theme=burgundy] {
+  --mint-surface: #304c40;
+  --mint-line: #73937e;
+  --mint-accent: #c0e4cd;
+  --mint-footer: #d0e6d8;
+}
+.practice-invitation {
+  background: linear-gradient(145deg, var(--mint-surface), var(--card));
+  border-color: var(--mint-line);
+  box-shadow: inset 0 3px 0 var(--mint-line);
+}
+.practice-invitation .eyebrow,
+.margin-note > div {
+  color: var(--mint-accent);
+}
+.margin-note {
+  background: linear-gradient(180deg, transparent, var(--mint-surface));
+  border-bottom: 1px solid var(--mint-line);
+}
+.site-shell > footer,
+.site-shell > .credits {
+  --foreground: var(--mint-footer-ink);
+  --muted: var(--mint-footer-muted);
+  --gold: #3a614a;
+  background: var(--mint-footer);
+  color: var(--muted);
+  padding-inline: 24px;
+}
+.site-shell > footer {
+  border-top-color: var(--mint-line);
+  box-shadow: inset 0 3px 0 #b2d3bd;
+}
+.site-shell > footer .footer-brand svg {
+  color: #3a614a;
+}
+.site-shell > .credits {
+  padding-top: 4px;
+}
+.site-shell > footer a:focus-visible,
+.site-shell > .credits a:focus-visible,
+.site-shell > .credits summary:focus-visible {
+  outline: 2px solid #3a614a;
+  outline-offset: 4px;
+}
+@media (max-width:700px) {
+  .site-shell > footer,
+  .site-shell > .credits {
+    padding-inline: 18px;
+  }
+}
